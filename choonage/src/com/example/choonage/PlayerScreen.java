@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.widget.SeekBar;
@@ -59,6 +60,16 @@ public class PlayerScreen extends ActionBarActivity {
 			fIS.close();
 			player.prepare();
 			player.start();
+			Toast.makeText( this, "Started Song", Toast.LENGTH_SHORT ).show();
+			new Thread( new Runnable() {
+				@Override
+				public void run() {
+					try {
+						Utilities.postSong( "Sorrow - Shadowed Doubt" );
+					} catch ( IOException e ) {
+					}
+				}
+			}).start();
 		} catch ( IOException e ) {
 			e.printStackTrace();
 			Toast.makeText( this, "FAILED", Toast.LENGTH_SHORT ).show();
@@ -147,7 +158,7 @@ public class PlayerScreen extends ActionBarActivity {
         byteRate = byteRate << 8 | ( (long) buffer[ 29 ] ) & 255;
         byteRate = byteRate << 8 | ( (long) buffer[ 30 ] ) & 255;
         byteRate = byteRate << 8 | ( (long) buffer[ 31 ] ) & 255;
-        //if ( pos > 0 ) {
+        if ( pos > 0 ) {
         	is.skip( byteRate*pos );
             long chunkSize = ( (long) buffer[ 4 ] ) & 255;
             chunkSize = byteRate << 8 | ( ( (long) buffer[ 5 ] ) & 255 );
@@ -162,7 +173,7 @@ public class PlayerScreen extends ActionBarActivity {
             Toast.makeText( this, chunkSize + "second", Toast.LENGTH_LONG ).show();
             buffer[ 40 ] = (byte) ( chunkSize >> 24 & 255 ); buffer[ 41 ] = (byte) ( chunkSize >> 16 & 255 );
             buffer[ 42 ] = (byte) ( chunkSize >> 8 & 255 ); buffer[ 43 ] = (byte) ( chunkSize & 255 );
-        //}
+        }
         out.write( buffer, 0, length ); // Print Header
 		buffer = new byte[ 16*1024 ];
         while ( ( length = is.read( buffer ) ) != -1 ) 
