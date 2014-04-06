@@ -17,8 +17,8 @@ public class HostPlayerActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_host_player);
 		String song = "any";
-		//Bundle extras = getIntent().getExtras();
-		//song = extras.getString("song");
+		Bundle extras = getIntent().getExtras();
+		song = extras.getString("song");
 		//TextView songselected = (TextView) findViewById(R.id.songselected);
 		//songselected.setText(song);
 		
