@@ -60,7 +60,7 @@ public class PlayerScreen extends ActionBarActivity {
 			fIS.close();
 			player.prepare();
 			player.start();
-			Toast.makeText( this, "Started Song", Toast.LENGTH_SHORT ).show();
+			//Toast.makeText( this, "Started Song", Toast.LENGTH_SHORT ).show();
 			new Thread( new Runnable() {
 				@Override
 				public void run() {
@@ -72,7 +72,7 @@ public class PlayerScreen extends ActionBarActivity {
 			}).start();
 		} catch ( IOException e ) {
 			e.printStackTrace();
-			Toast.makeText( this, "FAILED", Toast.LENGTH_SHORT ).show();
+			//Toast.makeText( this, "FAILED", Toast.LENGTH_SHORT ).show();
 			player = null;
 		}
 		//player = MediaPlayer.create(this, R.raw.song);
@@ -164,13 +164,13 @@ public class PlayerScreen extends ActionBarActivity {
             chunkSize = byteRate << 8 | ( ( (long) buffer[ 5 ] ) & 255 );
             chunkSize = byteRate << 8 | ( ( (long) buffer[ 6 ] ) & 255 );
             chunkSize = byteRate << 8 | ( ( (long) buffer[ 7 ] ) & 255 );
-            Toast.makeText( this, chunkSize + "initial", Toast.LENGTH_LONG ).show();
+            //Toast.makeText( this, chunkSize + "initial", Toast.LENGTH_LONG ).show();
             chunkSize -= byteRate*pos*8;
-            Toast.makeText( this, chunkSize + "first", Toast.LENGTH_LONG ).show();
+            //Toast.makeText( this, chunkSize + "first", Toast.LENGTH_LONG ).show();
             buffer[ 4 ] = (byte) ( chunkSize >> 24 & 255 ); buffer[ 5 ] = (byte) ( chunkSize >> 16 & 255 );
             buffer[ 6 ] = (byte) ( chunkSize >> 8 & 255 ); buffer[ 7 ] = (byte) ( chunkSize & 255 );
             chunkSize -= 36;
-            Toast.makeText( this, chunkSize + "second", Toast.LENGTH_LONG ).show();
+            //Toast.makeText( this, chunkSize + "second", Toast.LENGTH_LONG ).show();
             buffer[ 40 ] = (byte) ( chunkSize >> 24 & 255 ); buffer[ 41 ] = (byte) ( chunkSize >> 16 & 255 );
             buffer[ 42 ] = (byte) ( chunkSize >> 8 & 255 ); buffer[ 43 ] = (byte) ( chunkSize & 255 );
         }

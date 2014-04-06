@@ -76,22 +76,15 @@
       android:text="@string/initial_time"
       android:textAppearance="?android:attr/textAppearanceSmall" />
 
-   <TextView
-      android:id="@+id/textView3"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignLeft="@+id/imageButton3"
-      android:text="@string/hello_world"
-      android:textAppearance="?android:attr/textAppearanceMedium" />
+
 
    <ImageView
-      android:id="@+id/imageView1"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_alignParentBottom="true"
-      android:layout_alignParentLeft="true"
-      android:layout_below="@+id/textView3"
-      android:src="@drawable/ic_launcher" />
+       android:id="@+id/imageView1"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_alignBottom="@+id/textView1"
+       android:layout_alignRight="@+id/imageButton4"
+       android:src="@raw/logotransparent100" />
 
    <TextView
       android:id="@+id/textView4"

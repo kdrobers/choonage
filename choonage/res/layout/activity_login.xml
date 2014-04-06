@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.choonage.LoginActivity"
-    tools:ignore="MergeRootFrame" >
-
+    tools:ignore="MergeRootFrame"
+    android:background="@color/chred" >
+    
     <TextView
         android:id="@+id/testtext"
         android:layout_width="wrap_content"
@@ -21,7 +22,9 @@
         android:layout_marginTop="46dp"
         android:ems="10"
         android:hint="@string/enterPassword"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:background="@color/white" 
+	/> 
 
     <EditText
         android:id="@+id/enterUsername"
@@ -31,7 +34,8 @@
         android:layout_alignRight="@+id/enterPassword"
         android:layout_marginTop="92dp"
         android:ems="10"
-        android:hint="@string/enterUsername" >
+        android:hint="@string/enterUsername"
+        android:background = "@color/white" >
 
         <requestFocus />
     </EditText>
@@ -45,6 +49,6 @@
         android:layout_alignRight="@+id/enterPassword"
         android:layout_below="@+id/enterPassword"
         android:layout_marginTop="64dp"
-        android:text="Login" />
-
+        android:text="Login"
+        android:background = "@color/white" />
 </RelativeLayout>

@@ -1,7 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.choonage.SongSelectionActivity"
-    tools:ignore="MergeRootFrame" />
+    android:background="@color/chred">
+	
+	<Spinner
+	       android:id="@+id/songselection"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_below="@+id/textView1"
+	       android:layout_marginTop="52dp" 
+	       android:entries= "@array/song_arrays"
+	       android:prompt = "@string/songprompt"/>
+	
+	   <Button
+	       android:id="@+id/buttonselectsong"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_below="@+id/songselection"
+	       android:layout_centerHorizontal="true"
+	       android:layout_marginTop="116dp"
+	       android:text="Play Song" 
+	       android:onClick="gotoHostPlayer"/>
+
+</RelativeLayout>

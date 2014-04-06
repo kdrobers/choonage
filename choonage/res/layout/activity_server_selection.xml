@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chred"
+    tools:context="com.example.choonage.ServerSelectionActivity"
+    tools:ignore="MergeRootFrame" >
+
+	   <Button
+	       android:id="@+id/buttonselectsong"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_below="@+id/serverselection"
+	       android:layout_marginTop="140dp"
+	       android:onClick="gotoHostPlayer"
+	       android:text="Listen" />
+
+	   <Spinner
+	       android:id="@+id/serverselection"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_alignParentTop="true"
+	       android:layout_marginTop="120dp"
+	       android:entries="@array/server_array"
+	       android:prompt="@string/serverprompt" />
+    
+    </RelativeLayout>
