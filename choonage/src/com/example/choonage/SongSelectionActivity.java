@@ -13,9 +13,7 @@ import android.widget.Spinner;
 
 public class SongSelectionActivity extends ActionBarActivity {
 
-	private Spinner songspinner;
 
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,8 +23,7 @@ public class SongSelectionActivity extends ActionBarActivity {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
-		
-		songspinner = (Spinner)findViewById(R.id.songselection);
+
 	}
 
 	@Override
@@ -50,9 +47,11 @@ public class SongSelectionActivity extends ActionBarActivity {
 	}
 
 	public void gotoHostPlayer(View view){
-		String song = songspinner.getSelectedItem().toString();
+		Spinner songspinner = (Spinner) findViewById(R.id.songselection);
+		Object item = songspinner.getSelectedItem();
+		String song = item.toString();
 		
-		Intent intent = new Intent(this,HostPlayerActivity.class);
+		Intent intent = new Intent(this, PlayerScreen.class);
 		intent.putExtra(song, song);
 		startActivity(intent);
 	}

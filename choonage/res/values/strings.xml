@@ -12,13 +12,15 @@
     <string name="guestOption">I want to listen to others</string>
     <string name="title_activity_song_selection">SongSelectionActivity</string>
     <string name="songprompt">Select a song</string>
+    <string name="initial_time">Initial Time</string>
 
     <string-array name="song_arrays">
-        <item>Song 1</item>
+        <item>Sorrow - Shadowed Doubt.mp3</item>
         <item>Song 2</item>
         <item>Song 3</item>
     </string-array>
 
     <string name="title_activity_host_player">HostPlayerActivity</string>
+    <string name="title_activity_player_screen">PlayerScreen</string>
 
 </resources>
