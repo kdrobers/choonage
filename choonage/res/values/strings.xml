@@ -4,5 +4,21 @@
     <string name="app_name">choonage</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="enterUsername">Enter Username</string>
+    <string name="enterPassword">Enter Password</string>
+    <string name="forgotpassword">Forgot Password?</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hostOption">I want to listen to my music</string>
+    <string name="guestOption">I want to listen to others</string>
+    <string name="title_activity_song_selection">SongSelectionActivity</string>
+    <string name="songprompt">Select a song</string>
+
+    <string-array name="song_arrays">
+        <item>Song 1</item>
+        <item>Song 2</item>
+        <item>Song 3</item>
+    </string-array>
+
+    <string name="title_activity_host_player">HostPlayerActivity</string>
 
 </resources>

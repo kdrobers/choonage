@@ -1,18 +1,19 @@
 package com.example.choonage;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.EditText;
 
 public class LoginActivity extends ActionBarActivity {
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -41,9 +42,21 @@ public class LoginActivity extends ActionBarActivity {
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		return super.onOptionsItemSelected(item);
+		return super.onOptionsItemSelected(item);		
 	}
 
+	public void login(View view) {
+		EditText usernameField = (EditText)findViewById(R.id.enterUsername);
+		EditText passwordField = (EditText)findViewById(R.id.enterPassword);
+		
+		String username = usernameField.getText().toString();
+		String password = passwordField.getText().toString();
+		//check username and password on server
+		Intent intent = new Intent(LoginActivity.this, HomepageActivity.class);
+		intent.putExtra(username,username);
+		startActivity(intent);
+	}
+	
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
