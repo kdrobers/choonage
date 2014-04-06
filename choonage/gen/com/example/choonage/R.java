@@ -1132,8 +1132,7 @@ containing a value of this type.
         public static final int fragment_host_player=0x7f03001d;
         public static final int fragment_main=0x7f03001e;
         public static final int fragment_server_selection=0x7f03001f;
-        public static final int fragment_song_selection=0x7f030020;
-        public static final int support_simple_spinner_dropdown_item=0x7f030021;
+        public static final int support_simple_spinner_dropdown_item=0x7f030020;
     }
     public static final class menu {
         public static final int host_player=0x7f0e0000;

@@ -18,12 +18,6 @@ public class SongSelectionActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_song_selection);
-
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
-
 	}
 
 	@Override
@@ -55,22 +49,4 @@ public class SongSelectionActivity extends ActionBarActivity {
 		intent.putExtra(song, song);
 		startActivity(intent);
 	}
-	
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_song_selection,
-					container, false);
-			return rootView;
-		}
-	}
-
 }

@@ -347,8 +347,7 @@ int layout activity_song_selection 0x7f03001c
 int layout fragment_host_player 0x7f03001d
 int layout fragment_main 0x7f03001e
 int layout fragment_server_selection 0x7f03001f
-int layout fragment_song_selection 0x7f030020
-int layout support_simple_spinner_dropdown_item 0x7f030021
+int layout support_simple_spinner_dropdown_item 0x7f030020
 int menu host_player 0x7f0e0000
 int menu login 0x7f0e0001
 int menu main 0x7f0e0002
